@@ -11,8 +11,8 @@ import smtplib
 from email.mime.text import MIMEText
 
 document_content = ""
-EMAIL_ADDRESS = "ahmedasifhafiz@gmail.com"
-EMAIL_PASS = "udbd ghvw lsem wjkd"
+EMAIL_ADDRESS = os.environ.get("EMAIL_ADDRESS")
+EMAIL_PASS = os.environ.get("EMAIL_PASSWORD")
 class AgentState(TypedDict):
     messages:Annotated[Sequence[BaseMessage],add_messages]
 @tool
